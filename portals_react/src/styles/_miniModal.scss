@@ -1,0 +1,18 @@
+.modalMini {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    background-color: rgb(255 255 255);
+    border: 2px solid var(--ds-background-neutral, #091e420f);
+    border-radius: 6px;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 1129.5px;
+    top: 254px;
+}
+
+.modal-content1 {
+    color: black;
+}

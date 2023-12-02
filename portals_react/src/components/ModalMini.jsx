@@ -8,9 +8,9 @@ export default function ModalMini({ closeModalBis }) {
                 className=""
             ></div>
             <div className="modalMini">
-                <div className="modal-content">Boîte modal</div>
+                <div className="modal-content1">Boîte modal</div>
                 <button
-                    className="button-modal"
+                    className="button-close"
                     onClick={closeModalBis}
                 >
                     X

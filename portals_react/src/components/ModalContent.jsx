@@ -17,7 +17,7 @@ export default function ModalContent({ closeModal }) {
                         document.body
                     )}</div>
                 <button
-                    className="button-modal"
+                    className="button-close"
                     onClick={closeModal}
                 >
                     X
