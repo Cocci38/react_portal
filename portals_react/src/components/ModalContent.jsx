@@ -6,6 +6,7 @@ export default function ModalContent({ closeModal }) {
     const [showModalBis, setShowModalBis] = useState(false);
     return (
         <>
+            <div id="modal-window"  class="shadow" ></div>
             <div
                 onClick={closeModal}
                 className=""
