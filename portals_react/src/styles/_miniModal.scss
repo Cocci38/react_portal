@@ -11,8 +11,11 @@
     position: absolute;
     width: 300px;
     height: 250px;
-    left: 700px;
-    top: 254px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // left: 57.8%;
+    // top: 41%;
     z-index: 2;
 }
 

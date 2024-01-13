@@ -84,8 +84,9 @@
   position: absolute;
   width: 300px;
   height: 250px;
-  left: 700px;
-  top: 254px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
@@ -149,4 +150,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.opacity {
+  opacity: 0.33;
 }/*# sourceMappingURL=index.css.map */
