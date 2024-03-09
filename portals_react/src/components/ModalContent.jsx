@@ -18,7 +18,6 @@ export default function ModalContent({ closeModal }) {
             <div id="modal-window" class="shadow" ></div>
             <div
                 onClick={closeModal}
-                className=""
             ></div>
             <div className={!shadow ? "modal" : "modal opacity"}>
                 <div className="modal-content"><button className={!showModalBis ? "buttonModal" : "buttonHide"} onClick={() => setShowModalBis(true)}>Mini</button>

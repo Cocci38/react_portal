@@ -5,13 +5,12 @@ export default function ModalMini({ closeModalBis }) {
         <>
             <div
                 onClick={closeModalBis}
-                className=""
             ></div>
             <div className="modalMini">
                 <div className="modal-content1">Boîte modal</div>
-                <div class="consent-modal-choices">
-                    <button class="consent-modal-no" onClick={closeModalBis}>non</button>
-                    <button class="consent-modal-yes">oui</button>
+                <div className="consent-modal-choices">
+                    <button className="consent-modal-no" onClick={closeModalBis}>non</button>
+                    <button className="consent-modal-yes">oui</button>
                 </div>
                 <button
                     className="button-close"
