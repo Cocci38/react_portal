@@ -26,7 +26,7 @@ export default function ModalContent({ closeModal }) {
                         document.body
                     )}
                     
-                    <button className={!showModalColor ? "buttonModal" : "buttonHide"} onClick={() => setShowModalColor(true)}>Couleurs</button>
+                    <button className={!showModalBis ? "buttonModal" : "buttonHide"} onClick={() => setShowModalColor(true)}>Couleurs</button>
                     {showModalColor && createPortal(
                         <ModalColor closeModalColor={() => setShowModalColor(false)} />,
                         document.body
