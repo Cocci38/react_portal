@@ -1,14 +1,22 @@
 import React, { useState } from 'react'
 
+/**
+ * Boîte modal pour afficher et modifier les couleurs (en phase de construction)
+ * @param {closeModalColor} param0 
+ * @returns 
+ */
 export default function ModalColor({ closeModalColor }) {
 
     const [showColors, setShowColors] = useState("");
+
+    // Tableau des différentes couleurs
     const colors = [
         { "id": 0, "name": "red", "code": "#A62C31" }, 
         { "id": 1, "name": "blue", "code": "#89ADF3" },
         { "id": 2, "name": "grey", "code": "#242424" }
     ];
     
+    // Fonction du onclick pour modifier les couleurs
     const changeColor = (code) => {
         document.body.style.backgroundColor = code;
         setShowColors(code);
