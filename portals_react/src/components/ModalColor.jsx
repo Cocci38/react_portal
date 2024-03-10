@@ -11,15 +11,17 @@ export default function ModalColor({ closeModalColor }) {
 
     // Tableau des différentes couleurs
     const colors = [
-        { "id": 0, "name": "red", "code": "#A62C31" }, 
+        { "id": 0, "name": "red", "code": "#A62C31" },
         { "id": 1, "name": "blue", "code": "#89ADF3" },
         { "id": 2, "name": "grey", "code": "#242424" }
     ];
-    
+
     // Fonction du onclick pour modifier les couleurs
-    const changeColor = (code) => {
-        document.body.style.backgroundColor = code;
-        setShowColors(code);
+    const changeColor = (name, code) => {
+        localStorage.setItem('theme', name);
+        localStorage.setItem('color', code);
+        document.body.style.backgroundColor = localStorage.getItem('color');
+        // setShowColors(code);
     }
     //console.log(showColors);
     return (
@@ -32,7 +34,7 @@ export default function ModalColor({ closeModalColor }) {
                 <div className='flexRow'>
                     {Array.isArray(colors) ? colors
                         .map((color) => (
-                            <div key={color.id} className={color.name} onClick={() => { changeColor(color.code) }} style={{ backgroundColor: color.code, width: "30px", height: "30px", borderRadius: "10px" }}></div>
+                            <div key={color.id} className={color.name} onClick={() => { changeColor(color.name, color.code) }} style={{ backgroundColor: color.code, width: "30px", height: "30px", borderRadius: "10px" }}></div>
                         ))
                         : ""}
                 </div>
