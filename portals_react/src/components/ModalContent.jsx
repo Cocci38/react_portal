@@ -15,7 +15,7 @@ export default function ModalContent({ closeModal }) {
     }
     return (
         <>
-            <div id="modal-window" class="shadow" ></div>
+            <div id="modal-window" className="shadow" ></div>
             <div
                 onClick={closeModal}
             ></div>
