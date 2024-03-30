@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ColorMode, { ColorModeContext } from '../hooks/useColorMode';
+import { ColorModeContext } from '../hooks/useColorMode';
 import useColorMode from '../hooks/useColorMode';
 
 /**
@@ -10,6 +10,7 @@ import useColorMode from '../hooks/useColorMode';
 export default function ModalColor({ closeModalColor }) {
 
     const [showColors, setShowColors] = useState("");
+    const [showName, setShowName] = useState("");
 
     // Tableau des différentes couleurs
     const colors = [
@@ -18,14 +19,21 @@ export default function ModalColor({ closeModalColor }) {
         { "id": 2, "name": "grey", "code": "#242424" }
     ];
 
+    
     // const {changeColor} = useColorMode(ColorModeContext)
     // Fonction du onclick pour modifier les couleurs
     const changeColor = (name, code) => {
         localStorage.setItem('theme', name);
         localStorage.setItem('color', code);
-        // setShowColors(code);
+        document.body.style.backgroundColor = localStorage.getItem('color');
+        setShowColors(code);
+        setShowName(name);
+        
+        
     }
-    //console.log(showColors);
+    let colorName = showName;
+    useColorMode(colorName);
+    // console.log(colorName);
     return (
         <>
             <div

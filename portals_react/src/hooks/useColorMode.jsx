@@ -1,26 +1,21 @@
-import { createContext } from "react";
+import { Children, createContext, useEffect, useState } from "react";
 
-export const ColorModeContext = createContext(
-    "blue"
-    // changeColor: () => {}
-);
+export const ColorModeContext = createContext();
 
-export default function useColorMode() {
+export default function useColorMode(color) {
 
-    // Fonction du onclick pour modifier les couleurs
-    const changeColor = (name, code) => {
-        localStorage.setItem('theme', name);
-        localStorage.setItem('color', code);
-        document.body.style.backgroundColor = localStorage.getItem('color');
-    }
+    const [theme, setTheme] = useState(color);
+    // const [color, setColor] = useState(code);
+    useEffect(() => {
+        setTheme(color); // This triggers a re-render and updates the count
+    }, [theme]);
+
+console.log(theme);
+
 
     return (
-        <div>
-            <ColorModeContext.Provider value={{
-                theme
-                // changeColor
-            }}>
-            </ColorModeContext.Provider>
-        </div>
+        <ColorModeContext.Provider value={{ color }}>
+            {Children}
+        </ColorModeContext.Provider>
     )
 }

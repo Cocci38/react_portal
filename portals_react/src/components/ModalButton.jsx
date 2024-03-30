@@ -9,7 +9,7 @@ export default function ModalButton() {
 
     return (
         <>
-            <button className={!showModal ? 'buttonShow' : 'buttonHide'} onClick={() => setShowModal(true)}>{theme}</button>
+            <button className={!showModal ? 'buttonShow' : 'buttonHide'} onClick={() => setShowModal(true)}>Ouvrir</button>
             {showModal && createPortal(
                 <ModalContent closeModal={() => setShowModal(false)} />,
                 document.body
